@@ -1,0 +1,71 @@
+1. What is `NPM`?
+A. Informal: 
+NPM isn't a node package manager so npm is everything but not node package manager. If we go to npm official website, there are no place where it is written that npm is node package manager. NPM doesn't stand for Node Package Manager. So NPM developers said that it is everything but not node package manager. So basically NPM doesn't have a full form.
+Formal:
+Npm is basically is a standard repository for all the packages. It's one of the biggest package managers. Any package we need to include in our project we can use npm. All the packages are hosted over there. All the libraries we need & all the utility comes from npm. And npm is basically manages that up for us in our project.
+
+2. What is `Parcel/Webpack`? Why do we need it?
+A. Parcel and Webpack are both popular bundling tools used in web development. They help to minify, clean, and make code compact, making it easier to send a request or receive a response from the server.
+We need parcel because it is doing the following things for us:
+- Dev build: Parcel create the dev build for us.
+- Local server: Parcel create a local server for us. It host our app to the server.
+- HMR: HMR stand for Hot Module Replacement.
+- File Watching Algorithm: Parcel uses a file watching algorithm which is written in c++
+- Caching: Parcel is also caching things for giving us faster builds.
+- Image optimization: Parcel will do images optimization for us.
+- Minification: Suppose if we create a production build parcel will do minification our files also.
+- Bundling: Parcel will do bundling all the files for us.
+- Compress: Parcel will also compress our files. Files need to be compress so that the size is small so that we can ship this smaller version onto the code. It will remove all the wide spaces from your code. It minified or packed all our javascript files and ship it onto production.
+- Consistent Hashing: Parcel is also doing consistent hashing which is doing lot of things.
+- Code splitting: Parcel will be doing code splitting for us which will splits our files.
+- Differential bundling: Parcel can also do differential bundling to support older browser.
+- Diagnostic: Parcel is doing diagnostic behind the scene of our app.
+- Error Handling: Parcel is also giving us good error handling or error suggestions.
+- HTTPs: Parcel also give us a way to host our app on https. Suppose in our development environment so right now we don't have https but suppose if we want to test something which is works on SSL(Secure Socket Layer) i.e. https parcel give us that feature also.
+- Tree shaking: Parcel is also doing tree shaking so you know tree shaking algorithm what happens is see in our whole code suppose we have hundred of functions code but suppose we're just using four or five functions in our code so what parcel will do it will tree shake our files. Parcel will remove unused code for us.
+- Different dev and production bundles: Parcel have different build for dev. Parcel create different dev & production bundle because production build takes a little more time than building it for dev. Some optimization are more on production build & there are less optimization on dev build.
+
+3. What is `.parcel-cache`?
+A. Parcel-cache has those binary files and it is basically caching everything that we do and it is supporting HMR and it watching all those files so that the next built are developed faster.
+
+4. What is `npx`?
+A. The npx means executing a package.
+
+5. What is difference between `dependencies` vs `devDependencies`?
+A. The `dependencies` are used in production while `devDependencies` is generally require for development phase so when we're developing our app then we require that devDependencies.
+
+6. What is Tree Shaking?
+A. Tree shaking algorithm what happens is see in our whole code suppose we have hundred of functions code but suppose we're just using four or five functions in our code, so what bundlers like parcel will do it will tree shake our files and parcel will remove unused code for us.
+
+7. What is Hot Module Replacement?
+A. Hot Module Replacement (HMR) is a feature that allows developers to update JavaScript modules within a running application.
+
+8. List down your favorite 5 superpowers of Parcel and describe any 3 of them in your own words.
+A. The following are the favorite 5 superpowers of parcel:
+- Dev build: Parcel create the dev build for us.
+- Local server: Parcel create a local server for us. It host our app to the server.
+- HMR: Hot Module Replacement (HMR) is a feature that allows developers to update JavaScript modules within a running application.
+- File Watching Algorithm: Parcel uses a file watching algorithm which is written in c++
+- Caching: Parcel is also caching things for giving us faster builds.
+
+9. What is `.gitignore`? What should we add and not add into it?
+A. If we want some files to not go to production or git repository so just put it inside .gitignore file. We will only add essential things inside git repository like package.json, package-lock.json, etc. & avoid whatever we can regenerate on git repository like node_modules, .parcel-cache, etc.
+
+10. What is the difference between `package.json` and `package-lock.json`?
+A. The package.json file is basically a configuration for npm. It is basically all that configuration of our npm whatever data we gave it will come inside it like name, version, description, etc. NPM has created a json file for us. The package.json keeps a approx version of dependencies or it can keep exact version of dependencies or package.
+
+The package-lock.json keeps a track of exact version all the transitive dependencies that is being installed & which our project will ever need. Suppose if today there is a 2.8.5 released for parcel our package.json will stay like as it is but package-lock.json kind of locks version install and keeps a record of it. So package-lock.json keeps a record of every exact version of that package or dependency which is installed. So this is what the role of package-lock.json and it is different than package.json.
+
+11. Why should I not modify `package-lock.json`?
+A. package-lock.json is a generated file that tracks the entire tree of dependencies and the exact version of each dependency. It ensures that the same node_modules tree is generated every time npm install is run. Therefore, we shouldn't modify package-lock.json.
+
+12. What is `node_modules` ? Is it a good idea to push that on git?
+A. The node_modules contains all the code that we fetched from npm. For example, when we did npm install parcel what happened was it just went to the production & took some time like one minute to install parcel so what it was doing like it was fetching all the code of parcel & putting inside node_modules so if we go inside node_modules then we'll find parcel inside it. So node_modules is basically kind of like a database which contains the actual data of that dependencies or packages that our projects needs.
+
+Absolutely no! It isn't a good idea to push node_modules on git.
+
+13. What is the `dist` folder?
+A. So what parcel does is when we execute parcel right so when we write npx parcel index.html it generates a development builds for our project & it hosted on localhost:1234 so when it generate a development build it's put it up in dist folder. So the page content we're seeing on browser is coming from dist folder and it isn't coming from outside of dist folder. And when we refresh the page it was using parcel-cache and dist to update the page using that HMR(Hot Module Replacement).
+
+14. What is `browserslist`?
+A. The browserslist is npm package and it needs some configuration. And we'll configure it inside package.json where we'll add something known as browserslist which will take an array of browsers. Suppose if we have to just support chrome so we can write something like "last 2 Chrome versions" then our app will be compatible for last 2 chrome versions so whatever the latest last 2 chrome versions will there our app will be compatible with all and we can also write "last 10 Chrome versions" and we can also write something like "last 2 Firefox versions". And now our app will work on last 2 Chrome & Firefox versions.

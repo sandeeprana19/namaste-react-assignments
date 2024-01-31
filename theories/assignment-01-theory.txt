@@ -14,7 +14,7 @@ iv. Improved SEO: Search engines rank faster websites higher than slower website
 v. Affordable infrastructure: CDNs cut down the cost of investing in an infrastructure needed to maintain the speed of the site all around the world.
 
 4. Why is React known as React?
-A. React is a javascript library for building user interfaces. It is declarative, efficient and flexible. React makes it easy to create interactive UI by using a component-based approach. Therefore, React is known as ReactReact.
+A. React is a javascript library for building user interfaces. It is declarative, efficient and flexible. React makes it easy to create interactive UI by using a component-based approach. Therefore, React is known as React.
 
 5. What is cross-origin in script tag?
 A. Cross-Origin Resource Sharing(CORS) is an HTTP feature that allows a web application to access resources from another domain.
