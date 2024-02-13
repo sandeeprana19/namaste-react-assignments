@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  padding: 0.625rem 1.875rem;
+  box-sizing: border-box;
+}
+
+.c-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.c-image__img {
+  width: 100%;
+  height: auto;
+}
+
+.c-image--logo {
+  width: 4.375rem;
+}
+
+.c-input--search {
+  width: 43.75rem;
+  height: 3.125rem;
+  border-radius: 1.875rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffffff;
+  padding: 0 1.875rem;
+  color: white;
+}
+
+.c-input--search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.c-image--user {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 55%;
+}

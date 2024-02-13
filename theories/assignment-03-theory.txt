@@ -1,0 +1,11 @@
+23. What is JSX?
+A. JSX is a javascript syntax which is easier to create react element. It is convention where we kind of merge HTML and JS together. JSX is not HTML inside javascript. JSX is different than HTML. JSX is HTML or XML like syntax.
+
+24. Superpowers of JSX?
+A. The important amazing super power of JSX is that anywhere inside parentheses if we write curly braces inside JSX then we can run any piece of javascript expression meaning we can write any javascript code inside curly braces. For example, suppose we have an normal javascript variable let's call it as constant number = 10000 and now we can just write const variable number inside curly brace which is indeed inside JSX code parentheses and then babel will just put 10000 instead of {number} and then ultimately ReactDOM will render 10000 on browser. So we can inject any javascript code like mathematical calculation also inside JSX and it comes down as an HTML.
+
+25. Role of type attribute in script tag? What options can I use there?
+A. So to tell parcel that App.js file which is injected through script is not a normal javascript file by writing attribute type="module" and pass it to script tag. If we will write type="module" in App.js file will not be normal browser script so it will be considered as a module.
+
+26. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX?
+A. Yes! These things like {TitleComponent}, <TitleComponent /> and <TitleComponent></TitleComponent> are one and the same thing in JSX.
