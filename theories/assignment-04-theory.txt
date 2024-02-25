@@ -1,0 +1,41 @@
+27. Is JSX mandatory for React?
+A. JSX is not a requirement for using React. Using React without JSX is especially convenient when you don’t want to set up compilation in your build environment. Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). So, anything you can do with JSX can also be done with just plain JavaScript.
+
+28. Is ES6 mandatory for React?
+A. ES6 is not mandatory for React, but it is highly recommended.
+
+29. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX?
+A. {TitleComponent} describe that TitleComponent is a javascript variable and curly braces is where we can define any javascript code. So as TitleComponent is define inside curly braces so whatever is store inside it babel will replace this {TitleComponent} by TitleComponent stored value during transpilation.
+
+{<TitleComponent/>} and {<TitleComponent></TitleComponent>} are one & the same thing which describe that <TitleComponent/> is a functional component which will return some JSX code so as it is define inside curly braces so parcel will give responsibility of transpilation of this {<TitleComponent/>} to babel by whatever JSX code it's returning and it will then ultimately transpile the whole JSX code before reaches to the JS engine and JS engine will received the code by babel that our browser or react understand.
+
+30. How can I write comments in JSX?
+A. To write comments in JSX, we can use the syntax {/comment/} or {/**/} to wrap around the comment text.
+
+31. What is <React.Fragment></React.Fragment> and <></>?
+A. React.Fragment is a component introduced in React v16.2.0. It allows you to group a list of React components without adding an extra node to the DOM. The shorthand syntax of React.Fragment is <></>.
+
+32. What is Virtual DOM?
+A. The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
+
+33. What is Reconciliation in React?
+A. Reconciliation is the process of comparing the current state of the DOM with the desired state of the DOM and making the necessary changes to update the DOM. In React, reconciliation is used to update the UI when the state of a component changes.
+
+34. What is React Fiber?
+A. React Fiber is an ongoing re-implementation of React's core algorithm. It is the culmination of over two years of research by the React team. The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames. Other key features include the ability to pause, abort, or reuse work as new updates come in; the ability to assign priority to different types of updates; and new concurrency primitives.
+
+35. Why we need keys in React? When do we need keys in React?
+A. So when we loop over a lot of thing suppose we have a card container and now we have different children inside it and these children are RestaurantCards. So what happens is react optimize it render cycle. So when there are components at the same level that we looped in so what happen these component need to have unique id suppose we have ID1, ID2, ID3, ID4, etc. so they should be uniquely represented because suppose there is a new restaurant which came in and it came in at the first place so what will happen is our DOM into which react will have to insert a new RestaurantCard component on the first isn't it if we don't give an id. For example, suppose there are no ids and a new RestaurantCard came in what will react do is react will rerender all the RestaurantCards because react doesn't know right which RestaurantCard is new because react can't uniquely identify those RestaurantCards so react will rerender all those RestaurantCards. If there is one more RestaurantCard added to its parent container so react doesn't know right what place it need to put that RestaurantCard whether it has to came in at the 1st or 2nd or 3rd place. So what react does is basically react clean the container and rerender all the RestaurantCard components because react doesn't know which is new RestaurantCard added so it will treat all the RestaurantCard as same. But if we give each of the RestaurantCard component an unique id and new RestaurantCard came in with ID: xyz which is unique so now react exactly knows that ID1, ID2, ID3 and ID4 will already be there and the new element as come up in the first place as ID: xyz so react will just render one restro over there and it not render all the existing RestaurantCard. This is a huge optimization while we're writing code. Suppose if we're building infinite scroll or suppose if we're building a restro list where there are hundred of restro on the page so think about every time react rerender it will render all the hundred component so its a bad thing right. So we need to uniquely identify each and every loop item or list item. So whenever we are doing something on loop or whenever we're writing a map make a habit to add a key into list item component as a prop and this key should be unique. If we don't give a unique key react will throw warning once again. So key is very important so never ever forget to define it whenever we do a map function.
+
+36. Can we use index as keys in React?
+A. Yes! We can use index as keys in React but React itself says never use index as a key value because index as a key is anti-pattern.
+
+37. What is props in React? Ways to.
+A. The props is a short form for properties. Properties is something which we can pass to the component. Suppose we want to dynamically pass some data to some component so we can pass it as a props. The props at the end of the day is just normal argument to a function. So basically, when we say we're passing a props to a component it is exactly like saying we're passing some arguments to a function.
+The following are the ways to destructure props:
+I. We can destructure props on the fly after all props is a javascript object so it can be destructure like {resName, cuisine} as a parameter of functional component.
+II. We can destructure props inside functional component block like const {resName, cuisine} = props.
+III. Generally, the data will come from backend to us in the form of JSON so after storing data in const variable we'll pass it as a value of prop like <RestaurantCard resData={resObj} /> and then we can pass to functional component as a props where we can use it the way we like to. For example, we can follow step I or II from above to use it inside component.
+
+38. What is a Config Driven UI ?
+A. So when we open any website lets say Swiggy we see offers cards carousel and this offers are available in Bengaluru then suppose there are other offer in Kolkata so these offer card carousel will be different in Kolkata and these offer card carousel will be different in mumbai and there might be no offer card carousel in Dehradun. So we'll not create different websites for different part of country states because our website is driven by data and this is known as config driven UI. OUr website is driven by config. So basically, controlling our UI using data or config which comes from backend. So config driven UI is that our UI is basically driven by a config. This is the latest practice that every companies follows now. So all the UI is driven by a config which is an API data. Now suppose there is a carousel right so this carousel can have different data for delhi or mumbai or Bengaluru or Kolkata and suppose there is no carousel it won't even show carousel. So we have written the UI once and now according to the data which is coming from backend our UI is getting changed. This is known as config driven UI. For example, suppose we want to show a red color background in mumbai and a green color background in Kolkata we can do that too so we have to just send our color in API data as a config and this config will drive our UI this is known as config driven UI.
