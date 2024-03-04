@@ -1,0 +1,13 @@
+39. What is the difference between Named Export, Default export and * as export?
+A. Named Export: When we wants to export multiple files in a single file then we'll use named export so we need to write export const variable name in front of multiple const variable. When we'll import there will be a slight difference in importing. So whenever we have the named export we have to write curly braces and then whatever we need to import inside it like this import { namedExport file name } from "file path".
+Default export: When we wants to export one file in a single file then we'll use default export so we need to write export default so we need to write export default ComponentName or constantName. So whenever we have the default export we don't have to write default export ComponentName or const variable inside curly braces so we can import something like this import CDN_URL from "file path".
+* as export: We can also use the * symbol to import all the named exports from a file as an object.
+
+40. What is the importance of config.js file?
+A. The common or best practice is to keep hard coded data inside separate file that is known as generally constant.js or config.js or utils.js or something like that so the standard way is to create a folder utils. So all the utility files right which are common utility we'll put those files inside utils folder right. Some people also like to call or write utils folder like common or config but we write it as utils which means utilities that will be used all across our app and then we'll create a file name constants.js.
+
+41. What are React Hooks?
+A. React hooks is a normal javascript function which is given to us by react and it is pre-build and the only thing is that the function comes with some super powers. That function had some logic return behind the scenes inside react. That function is utility function given by react to us. So there are multiple functions those are known as react hooks.
+
+42. Why do we need a useState Hook?
+A. The useState() hook basically give us or generate super powerful state variable in react. Therefore, we need a useState Hook.
