@@ -5,6 +5,22 @@ import Search from "../assets/images/body/search.png";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchChange = (event) => {
+    const searchTerm = event.target.value.toLowerCase();
+
+    const filteredRestaurants = listOfRestaurants.filter((res) =>
+      res.info.name.toLowerCase().includes(searchTerm)
+    );
+
+    setListOfRestaurants(filteredRestaurants);
+    setSearchTerm(searchTerm);
+
+    if (searchTerm === "") {
+      setListOfRestaurants(resList);
+    }
+  };
 
   return (
     <div className="body">
@@ -30,6 +46,8 @@ const Body = () => {
               <input
                 type="search"
                 placeholder="Search for restaurants and food"
+                value={searchTerm}
+                onChange={handleSearchChange}
               />
               <button type="button">
                 <img src={Search} alt="Search icon" />
