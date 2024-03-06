@@ -81,7 +81,7 @@ header {
 }
 
 .restro-card:hover {
-  transform: scale(1.16);
+  transform: scale(0.95);
   background-color: #ffffff;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
@@ -162,6 +162,14 @@ header {
 
 .restro-filter-button {
   cursor: pointer;
+  height: 45px;
+  background: #f25925;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .restro-search {
@@ -203,4 +211,15 @@ header {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.filter-by-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-by {
+  font-size: 14px;
+  font-weight: 600;
 }

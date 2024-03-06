@@ -12,17 +12,20 @@ const Body = () => {
         <div className="title-container">
           <h1>Restaurants Lists</h1>
           <div className="action-wrapper">
-            <button
-              className="restro-filter-button"
-              onClick={() => {
-                const filteredRestaurants = listOfRestaurants.filter(
-                  (res) => res.info.avgRating > 4.3
-                );
-                setListOfRestaurants(filteredRestaurants);
-              }}
-            >
-              Top Rated Restaurant
-            </button>
+            <div className="filter-by-wrapper">
+              <span className="filter-by">Filter by:</span>
+              <button
+                className="restro-filter-button"
+                onClick={() => {
+                  const filteredRestaurants = listOfRestaurants.filter(
+                    (res) => res.info.avgRating > 4
+                  );
+                  setListOfRestaurants(filteredRestaurants);
+                }}
+              >
+                Top Rated Restaurant
+              </button>
+            </div>
             <div className="restro-search">
               <input
                 type="search"
