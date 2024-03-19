@@ -1,0 +1,32 @@
+43. What is a Microservice?
+A. In the microservices architecture, we have different services for different jobs. So we have a service which is like backend service, we have a UI service, we have a authentication service, we have a maybe like a service which connects to DB which maintains a database right, we have a service for our SMS sending, we have a service for maybe like lets say email notification. So there are different services and you know there all microservices are known as microservices or small services. And all these services combine together forms a big app. And all these microsevices talk to each other depending upon the use cases right. We had separate UI project, we have a separate backend project, we have a separate notification project, we have separate database thing and for each and every small thing we had a different project right. And this is know as separation of concern and single responsibility principle. So microservices architecture follows a single responsibility principle where each and every service has its own job and nobody is entering with it. Now with microservice architecture all of teams work on their own independant service like a backend teams is different maintaining their backend project and they have their own deployment cycle and everything is separate. So this is what is microservice architecture.
+
+44. What is Monolith architecture?
+A. So traditionally, you know when the app or web app was developed so they are all developed using a monolith architecture. So early, we have a huge big projects right and suppose we're building an application in this huge big project we use to have a small pieces right so this project itself have code of APIs which are developed by us. We also have UI code inside the same project. We have authentication code inside the same project. We have database connective code inside the same project. We can have notification so sending SMS code inside this project. So in this whole application we have APIs, we have backend written, we have frontend written, we have authentication written, we have connection to DB written, we have notification written, so all the code are there in the same service. And in this whole project you know even if we have to make a single change suppose if I have to change the color of a button right so what we have do we have to build this whole project and we have to deploy this whole project which is the big bulky project. So this is called Monolith Architecture.
+
+45. What is the difference between Monolith and Microservice?
+A. 
+
+46. Why do we need a useEffect Hook?
+A. An useEffect has its own specific function. So first of all, this useEffect comes from react library and it will be imported as a named import. So useEffect is again a function right so we will called it like a function and useEffect will take two arguments so the first argument is arrow function. This arrow function is a callback function. So the first argument is a callback function and the second argument is a dependency array. An useEffect will be helpful when we have to implement the second approach to fetch data from backend and the second approach is  render component => do API call => once we receive API data => rerender the component again . Therefore, this is why we need an useEffect hook.
+
+47. What is Optional Chaining?
+A.
+
+48. What is Shimmer UI?
+A. A shimmer UI resembles the page's actual UI so that the user understand how quickly the web or mobile app will load even before the content has shows up. So it in kind of like we load fake page or skeleton until we get the actual data from the API. So this is standard practice and if we're building then definately we should use a shimmer UI to make a better user experience.
+
+49. What is the difference between JS expression and JS statement?
+A. 
+
+50. What is Conditional Rendering, explain with a code example?
+A. Rendering the component or jsx on the basis of condition so this concept is known as conditional rendering.
+
+51. What is CORS?
+A. So basically, calling swiggy api from localhost has been blocked due to CORS policy. So basically, our browser chrome isn't allowing us to call swiggy api from localhost so from one origin to another origin so if there is a origin mismatch the browser blocks that API call. This is known as CORS policy.
+
+52. What is async and await?
+A. 
+
+53. What is the use of `const json = await data.json();` in getRestaurants()?
+A.
