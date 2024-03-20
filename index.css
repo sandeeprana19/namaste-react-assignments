@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 header {
@@ -14,6 +15,7 @@ header {
   width: 100%;
   z-index: 999;
   background: #ffffff;
+  box-sizing: border-box;
 }
 
 .container,
@@ -89,9 +91,9 @@ header {
 }
 
 .restro-card:hover {
-  transform: scale(0.95);
+  transform: scale(1.07);
   background-color: #ffffff;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .restro-logo-container {

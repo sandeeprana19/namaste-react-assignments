@@ -5,19 +5,25 @@ A. In the microservices architecture, we have different services for different j
 A. So traditionally, you know when the app or web app was developed so they are all developed using a monolith architecture. So early, we have a huge big projects right and suppose we're building an application in this huge big project we use to have a small pieces right so this project itself have code of APIs which are developed by us. We also have UI code inside the same project. We have authentication code inside the same project. We have database connective code inside the same project. We can have notification so sending SMS code inside this project. So in this whole application we have APIs, we have backend written, we have frontend written, we have authentication written, we have connection to DB written, we have notification written, so all the code are there in the same service. And in this whole project you know even if we have to make a single change suppose if I have to change the color of a button right so what we have do we have to build this whole project and we have to deploy this whole project which is the big bulky project. So this is called Monolith Architecture.
 
 45. What is the difference between Monolith and Microservice?
-A. 
+A. The following are the differences between Monolith and Microservice:
+I. Structure: Monolithic applications are a single codebase, while Microservices are composed of multiple loosely-coupled services.
+II. Interdependence: All software components in a monolithic system are interdependent, but microservices are made up of small, independent components.
+III. Communication: Monolithic applications are tightly coupled, while microservices communicate with each other through APIs.
+IV. Testing: Testing microservices can be more complex than monolithic applications.
 
 46. Why do we need a useEffect Hook?
 A. An useEffect has its own specific function. So first of all, this useEffect comes from react library and it will be imported as a named import. So useEffect is again a function right so we will called it like a function and useEffect will take two arguments so the first argument is arrow function. This arrow function is a callback function. So the first argument is a callback function and the second argument is a dependency array. An useEffect will be helpful when we have to implement the second approach to fetch data from backend and the second approach is  render component => do API call => once we receive API data => rerender the component again . Therefore, this is why we need an useEffect hook.
 
 47. What is Optional Chaining?
-A.
+A. With the optional chaining, if a certain property doesn't exist then undefined is returned immediately. So only if the property that is before the question mark that is Monday exists then the open property will be read from there. But if not, then immediately undefined will be returned.
 
 48. What is Shimmer UI?
 A. A shimmer UI resembles the page's actual UI so that the user understand how quickly the web or mobile app will load even before the content has shows up. So it in kind of like we load fake page or skeleton until we get the actual data from the API. So this is standard practice and if we're building then definately we should use a shimmer UI to make a better user experience.
 
 49. What is the difference between JS expression and JS statement?
-A. 
+A. In JavaScript, an expression is a combination of values, variables, and operators that evaluates to a value. For example, the expression 1 + 2 evaluates to the value 3.
+
+A statement is a unit of code that performs an action. For example, the statement let x = 1; assigns the value 1 to the variable x.
 
 50. What is Conditional Rendering, explain with a code example?
 A. Rendering the component or jsx on the basis of condition so this concept is known as conditional rendering.
@@ -26,7 +32,7 @@ A. Rendering the component or jsx on the basis of condition so this concept is k
 A. So basically, calling swiggy api from localhost has been blocked due to CORS policy. So basically, our browser chrome isn't allowing us to call swiggy api from localhost so from one origin to another origin so if there is a origin mismatch the browser blocks that API call. This is known as CORS policy.
 
 52. What is async and await?
-A. 
+A. In JavaScript, async and await are keywords that can help make asynchronous code easier to read. async is used to mark a function as asynchronous, and await is used to get the result of an asynchronous expression. Await expressions suspend execution until the returned promise is fulfilled or rejected, and the resolved value of the promise is treated as the return value of the await expression. async functions automatically return a promise, and throwing an error will reject the promise.
 
 53. What is the use of `const json = await data.json();` in getRestaurants()?
-A.
+A. The json() method is call to parse the value which is refer as data from body property value that is readable stream of response object. And then it will give us the object that will contain data about restaurants.
