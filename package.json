@@ -19,7 +19,8 @@
   "homepage": "https://github.com/sandeeprana19/namaste-react-assignments#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
     "parcel": "^2.11.0",

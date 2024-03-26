@@ -1,4 +1,4 @@
-import { CDN_URL } from "../utils/config";
+import { CDN_URL } from "../utils/constant";
 import Star from "../assets/images/body/restro-cards/star.png";
 
 const RestaurantCard = (props) => {
