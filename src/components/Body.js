@@ -42,7 +42,7 @@ const Body = () => {
                 className="restro-filter-button"
                 onClick={() => {
                   const filteredRestaurants = listOfRestaurants.filter(
-                    (res) => res.info.avgRating > 4.1
+                    (res) => res.info.avgRating > 4
                   );
                   setFilteredRestaurants(filteredRestaurants);
                 }}
@@ -82,6 +82,7 @@ const Body = () => {
               <Link
                 to={"/restaurant/" + restaurant.info.id}
                 key={restaurant.info.id}
+                className="restro-card-wrapper"
               >
                 {" "}
                 <RestaurantCard resData={restaurant} />
