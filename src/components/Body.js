@@ -7,24 +7,24 @@ import { Link } from "react-router-dom";
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    const res = await fetch(
+    const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
-    const data = await res.json();
+    const json = await data.json();
 
     setListOfRestaurants(
-      data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurants(
-      data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -42,7 +42,7 @@ const Body = () => {
                 className="restro-filter-button"
                 onClick={() => {
                   const filteredRestaurants = listOfRestaurants.filter(
-                    (res) => res.info.avgRating > 4
+                    (res) => res.info.avgRating > 4.1
                   );
                   setFilteredRestaurants(filteredRestaurants);
                 }}
@@ -54,9 +54,9 @@ const Body = () => {
               <input
                 type="search"
                 placeholder="Search for restaurants and food"
-                value={searchTerm}
+                value={searchText}
                 onChange={(e) => {
-                  setSearchTerm(e.target.value);
+                  setSearchText(e.target.value);
                 }}
                 onKeyDown={(e) => {
                   if (e.key === "Enter") {
@@ -64,7 +64,7 @@ const Body = () => {
                       (res) =>
                         res.info.name
                           .toLowerCase()
-                          .includes(searchTerm.toLowerCase())
+                          .includes(searchText.toLowerCase())
                     );
                     setFilteredRestaurants(filteredSearchRestaurants);
                   }
@@ -80,9 +80,9 @@ const Body = () => {
           {filteredRestaurants.map((restaurant) => {
             return (
               <Link
+                className="restro-card-wrapper"
                 to={"/restaurant/" + restaurant.info.id}
                 key={restaurant.info.id}
-                className="restro-card-wrapper"
               >
                 {" "}
                 <RestaurantCard resData={restaurant} />

@@ -25,16 +25,18 @@ const Header = () => {
               </li>
               <li>Cart</li>
               <li>
-                <button
-                  className="login-button"
-                  onClick={() => {
-                    btnTerm === "Login"
-                      ? setBtnTerm("Logout")
-                      : setBtnTerm("Login");
-                  }}
-                >
-                  {btnTerm}
-                </button>
+                <Link to="/login">
+                  <button
+                    className="login-button"
+                    onClick={() => {
+                      btnTerm === "Login"
+                        ? setBtnTerm("Logout")
+                        : setBtnTerm("Login");
+                    }}
+                  >
+                    {btnTerm}
+                  </button>
+                </Link>
               </li>
             </ul>
           </div>
