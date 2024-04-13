@@ -13,11 +13,11 @@ class UserClass extends Component {
       },
     };
 
-    console.log(this.props.name + "Child constructor");
+    // console.log(this.props.name + "Child constructor");
   }
 
   async componentDidMount() {
-    console.log(this.props.name + "Child componentDidMount");
+    // console.log(this.props.name + "Child componentDidMount");
 
     const data = await fetch("https://api.github.com/users/sandeeprana19");
 
@@ -33,7 +33,7 @@ class UserClass extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.props.name + "Child componentWillUpdate");
+    // console.log(this.props.name + "Child componentWillUpdate");
   }
 
   componentWillUnmount() {
@@ -41,7 +41,7 @@ class UserClass extends Component {
   }
 
   render() {
-    console.log(this.props.name + "Child render");
+    // console.log(this.props.name + "Child render");
 
     const { name, location, avatar_url } = this.state.userInfo;
     const { count } = this.state;
