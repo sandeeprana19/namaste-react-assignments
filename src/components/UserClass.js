@@ -47,7 +47,7 @@ class UserClass extends Component {
     const { count } = this.state;
 
     return (
-      <div className="user-card">
+      <div className="border border-solid border-black p-[0.625rem] mb-[1.875rem]">
         <h1>Count: {count}</h1>
         <button
           onClick={() => {

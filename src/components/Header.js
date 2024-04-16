@@ -6,31 +6,51 @@ const Header = () => {
   const [btnTerm, setBtnTerm] = useState("Login");
 
   return (
-    <header>
-      <div className="container">
-        <div className="header-wrapper">
-          <div className="logo-container">
-            <img src={LOGO_URL} alt="logo" className="logo" />
-          </div>
-          <div className="nav-items">
-            <ul>
+    <header className="p-5 shadow-[0rem_0.3125rem_0.625rem_0rem_rgba(0,0,0,0.27)] fixed top-0 start-0 w-full z-50 bg-white box-border">
+      <div className="w-[90rem] mx-auto">
+        <div className="flex items-center justify-between">
+          <Link to="/" className="w-12 flex items-center justify-center">
+            <img src={LOGO_URL} alt="logo" className="w-full h-auto" />
+          </Link>
+          <div>
+            <ul className="list-none ps-0 mt-0 mb-0 flex items-center gap-5">
               <li>
-                <Link to="/">Home</Link>
+                <Link
+                  className="text-base no-underline text-black hover:text-[#f25925] transition-all"
+                  to="/"
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/about">About Us</Link>
+                <Link
+                  className="text-base no-underline text-black hover:text-[#f25925] transition-all"
+                  to="/about"
+                >
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link to="/contact">Contact Us</Link>
+                <Link
+                  className="text-base no-underline text-black hover:text-[#f25925] transition-all"
+                  to="/contact"
+                >
+                  Contact Us
+                </Link>
               </li>
               <li>
-                <Link to="/grocery">Grocery</Link>
+                <Link
+                  className="text-base no-underline text-black hover:text-[#f25925] transition-all"
+                  to="/grocery"
+                >
+                  Grocery
+                </Link>
               </li>
-              <li>Cart</li>
+              <li className="text-base text-black">Cart</li>
               <li>
                 <Link to="/login">
                   <button
-                    className="login-button"
+                    className="h-11 bg-orange-600 hover:bg-orange-800 transition-all text-white rounded-md border-none p-[0.625rem] text-sm font-semibold outline-none"
                     onClick={() => {
                       btnTerm === "Login"
                         ? setBtnTerm("Logout")

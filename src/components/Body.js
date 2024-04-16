@@ -31,18 +31,18 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="container">
-        <div className="title-container">
-          <h1>Restaurants Lists</h1>
-          <div className="action-wrapper">
-            <div className="filter-by-wrapper">
-              <span className="filter-by">Filter by:</span>
+    <div className="pt-[8.625rem] mb-7">
+      <div className="w-[90rem] mx-auto">
+        <div className="flex items-center justify-between gap-x-[0.625rem]">
+          <h1 className="text-3xl font-bold text-black">Restaurants Lists</h1>
+          <div className="flex items-center gap-x-5">
+            <div className="flex items-center gap-x-[0.625rem]">
+              <span className="text-sm font-semibold">Filter by:</span>
               <button
-                className="restro-filter-button"
+                className="h-11 bg-orange-600 hover:bg-orange-800 transition-all text-white rounded-md border-none p-[0.625rem] text-sm font-semibold outline-none"
                 onClick={() => {
                   const filteredRestaurants = listOfRestaurants.filter(
-                    (res) => res.info.avgRating > 4.1
+                    (res) => res.info.avgRating > 4.4
                   );
                   setFilteredRestaurants(filteredRestaurants);
                 }}
@@ -50,8 +50,9 @@ const Body = () => {
                 Top Rated Restaurant
               </button>
             </div>
-            <div className="restro-search">
+            <div className="relative">
               <input
+                className="w-[31.25rem] h-[2.8125rem] rounded-md border border-solid border-black p-1 ps-11 outline-none"
                 type="search"
                 placeholder="Search for restaurants and food"
                 value={searchText}
@@ -70,17 +71,20 @@ const Body = () => {
                   }
                 }}
               />
-              <button type="button">
-                <img src={Search} alt="Search icon" />
+              <button
+                type="button"
+                className="w-[2.8125rem] p-3 flex items-center justify-center overflow-hidden absolute top-1/2 -translate-y-1/2 start-0 bg-transparent border-none cursor-pointer"
+              >
+                <img src={Search} alt="Search icon" className="w-full h-auto" />
               </button>
             </div>
           </div>
         </div>
-        <div className="restro-container">
+        <div className="flex flex-wrap gap-7 mt-7">
           {filteredRestaurants.map((restaurant) => {
             return (
               <Link
-                className="restro-card-wrapper"
+                className="no-underline text-black"
                 to={"/restaurant/" + restaurant.info.id}
                 key={restaurant.info.id}
               >

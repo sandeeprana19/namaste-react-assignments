@@ -16,8 +16,8 @@ const RestaurantMenu = () => {
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
   return (
-    <div className="body">
-      <div className="container">
+    <div className="pt-[8.625rem] mb-7">
+      <div className="w-[90rem] mx-auto">
         <h1>{name}</h1>
         <h2>
           {cuisines.join(",")} - {costForTwoMessage}
