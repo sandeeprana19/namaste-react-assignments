@@ -47,22 +47,25 @@ class UserClass extends Component {
     const { count } = this.state;
 
     return (
-      <div className="border border-solid border-black p-[0.625rem] mb-[1.875rem]">
-        <h1>Count: {count}</h1>
-        <button
-          onClick={() => {
-            this.setState({
-              count: count + 1,
-            });
-          }}
-        >
-          Increase Count
-        </button>
-        <div>
-          <img src={avatar_url} alt="Avatar" />
+      <div className="w-64 rounded-xl shadow-[0_0_25px_rgba(0,0,0,0.1)] bg-white relative mt-20 p-8 h-72 pt-32 text-center">
+        <div className="w-40 rounded-xl shadow-[0_0_25px_rgba(0,0,0,0.1)] flex items-center justify-center overflow-hidden absolute start-1/2 -translate-x-1/2 -top-14">
+          <img src={avatar_url} alt="Avatar" className="w-full h-auto" />
         </div>
-        <h1>Name: {name}</h1>
-        <h2>Location: {location}</h2>
+        <div className="flex items-center justify-center flex-col gap-2">
+          <h1>Count: {count}</h1>
+          <button
+            className="h-8 bg-orange-600 hover:bg-orange-800 transition-all text-white rounded-md border-none flex items-center justify-center px-3 text-sm font-semibold outline-none"
+            onClick={() => {
+              this.setState({
+                count: count + 1,
+              });
+            }}
+          >
+            Increase Count
+          </button>
+          <h1>Name: {name}</h1>
+          <h2>Location: {location}</h2>
+        </div>
       </div>
     );
   }

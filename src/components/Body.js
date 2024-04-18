@@ -32,7 +32,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="pt-[8.625rem] mb-7">
-      <div className="w-[90rem] mx-auto">
+      <div className="2xl:w-[90rem] w-[73.125rem] mx-auto">
         <div className="flex items-center justify-between gap-x-[0.625rem]">
           <h1 className="text-3xl font-bold text-black">Restaurants Lists</h1>
           <div className="flex items-center gap-x-5">
@@ -42,7 +42,7 @@ const Body = () => {
                 className="h-11 bg-orange-600 hover:bg-orange-800 transition-all text-white rounded-md border-none p-[0.625rem] text-sm font-semibold outline-none"
                 onClick={() => {
                   const filteredRestaurants = listOfRestaurants.filter(
-                    (res) => res.info.avgRating > 4.4
+                    (res) => res.info.avgRating > 4
                   );
                   setFilteredRestaurants(filteredRestaurants);
                 }}

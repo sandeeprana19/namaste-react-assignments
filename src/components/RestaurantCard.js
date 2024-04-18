@@ -8,7 +8,7 @@ const RestaurantCard = (props) => {
     resData?.info;
 
   return (
-    <div className="w-[21.1875rem] rounded-[1.25rem] overflow-hidden cursor-pointer transition-[all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955)] hover:scale-[1.07] bg-white hover:shadow-[0_0_1.25rem_rgba(0,0,0,0.2)] transition-all h-full">
+    <div className="w-[16.9688rem] 2xl:w-[21.1875rem] rounded-[1.25rem] overflow-hidden cursor-pointer transition-[all 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955)] hover:scale-[1.07] bg-white hover:shadow-[0_0_1.25rem_rgba(0,0,0,0.2)] transition-all h-full">
       <div className="w-full h-[13.75rem] flex items-center justify-center overflow-hidden">
         <img
           src={CDN_URL + cloudinaryImageId}

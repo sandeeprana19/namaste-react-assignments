@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <header className="p-5 shadow-[0rem_0.3125rem_0.625rem_0rem_rgba(0,0,0,0.27)] fixed top-0 start-0 w-full z-50 bg-white box-border">
-      <div className="w-[90rem] mx-auto">
+      <div className="2xl:w-[90rem] w-[73.125rem] mx-auto">
         <div className="flex items-center justify-between">
           <Link to="/" className="w-12 flex items-center justify-center">
             <img src={LOGO_URL} alt="logo" className="w-full h-auto" />
