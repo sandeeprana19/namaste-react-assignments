@@ -1,4 +1,5 @@
 import { Component } from "react";
+import UserContext from "../utils/UserContext";
 
 class UserClass extends Component {
   constructor(props) {

@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { LOGO_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [btnTerm, setBtnTerm] = useState("Login");
+  const { loggedInUser } = useContext(UserContext);
 
   return (
     <header className="p-5 shadow-[0rem_0.3125rem_0.625rem_0rem_rgba(0,0,0,0.27)] fixed top-0 start-0 w-full z-50 bg-white box-border">
@@ -60,6 +62,9 @@ const Header = () => {
                     {btnTerm}
                   </button>
                 </Link>
+              </li>
+              <li>
+                <h2 className="font-bold">{loggedInUser}</h2>
               </li>
             </ul>
           </div>

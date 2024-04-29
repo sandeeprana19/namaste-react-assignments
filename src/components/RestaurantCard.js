@@ -1,8 +1,11 @@
 import { CDN_URL } from "../utils/constant";
-import Star from "../assets/images/body/restro-cards/star.png";
+import Star from "../assets/images/body/restaurant-card/star.png";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
+  const { loggedInUser } = useContext(UserContext);
 
   const { cloudinaryImageId, name, cuisines, avgRating, sla, costForTwo } =
     resData?.info;
@@ -12,7 +15,7 @@ const RestaurantCard = (props) => {
       <div className="w-full h-[13.75rem] flex items-center justify-center overflow-hidden">
         <img
           src={CDN_URL + cloudinaryImageId}
-          alt="Restro Logo"
+          alt="Restaurant Logo"
           className="w-full h-full object-cover"
         />
       </div>
@@ -33,9 +36,23 @@ const RestaurantCard = (props) => {
         <h4 className="text-[0.9375rem] text-[#808080] font-normal">
           {cuisines.join(", ")}
         </h4>
+        <h4>Logged in user: {loggedInUser}</h4>
       </div>
     </div>
   );
+};
+
+export const WithAggregatedDiscount = (RestaurantCard) => {
+  return (props) => {
+    const { header, subHeader } = props.resData.info.aggregatedDiscountInfoV3;
+
+    return (
+      <div className="relative">
+        <label className="absolute top-4 left-4 text-xl font-extrabold text-white z-50">{`${header} ${subHeader}`}</label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;
