@@ -7,7 +7,7 @@ const RestaurantCategory = ({ data, showItem, setShowIndex }) => {
   };
 
   return (
-    <div className="bg-gray-200 shadow-xl px-5 py-4">
+    <div className="bg-gray-100 shadow-md px-5 py-4 rounded-lg">
       <div
         className="flex gap-4 justify-between items-center cursor-pointer"
         onClick={toggleItemListHandler}
