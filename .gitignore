@@ -1,4 +1,7 @@
-/coverage
+# dependencies
 /node_modules
 /dist
 .parcel-cache
+
+# testing
+/coverage
