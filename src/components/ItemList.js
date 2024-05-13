@@ -17,6 +17,7 @@ const ItemList = ({ items }) => {
 
         return (
           <div
+            data-testid="foodItem"
             key={id}
             className="flex justify-between gap-4 border-b-2 border-gray-300 pb-5 min-h-[11.5625rem]"
           >

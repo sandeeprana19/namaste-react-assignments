@@ -21,7 +21,7 @@ const Header = () => {
       <div className="2xl:w-[90rem] w-[73.125rem] mx-auto">
         <div className="flex items-center justify-between">
           <Link to="/" className="w-12 flex items-center justify-center">
-            <img src={LOGO_URL} alt="logo" className="w-full h-auto" />
+            <img src={LOGO_URL} alt="Logo" className="w-full h-auto" />
           </Link>
           <div>
             <ul className="list-none ps-0 mt-0 mb-0 flex items-center gap-5">
@@ -59,6 +59,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
+                  data-testid="cartWrap"
                   className="text-base no-underline text-black hover:text-[#f25925] transition-all group flex items-center gap-x-1"
                   to="/cart"
                 >
@@ -85,7 +86,10 @@ const Header = () => {
                       />
                     </i>
                     {cartItems.length !== 0 && (
-                      <span className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-xs font-bold text-white">
+                      <span
+                        data-testid="cart"
+                        className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-xs font-bold text-white"
+                      >
                         {cartItems.length}
                       </span>
                     )}

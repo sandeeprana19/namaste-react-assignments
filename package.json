@@ -5,6 +5,7 @@
   "scripts": {
     "test": "jest",
     "watch-test": "jest --watchAll",
+    "clear-cache": "jest --clearCache",
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },

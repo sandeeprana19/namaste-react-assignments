@@ -70,6 +70,7 @@ const Body = () => {
             </div>
             <div className="relative">
               <input
+                data-testid="searchInput"
                 className="w-[31.25rem] h-[2.8125rem] rounded-md border border-solid border-black p-1 ps-11 outline-none"
                 type="search"
                 placeholder="Search for restaurants and food"
