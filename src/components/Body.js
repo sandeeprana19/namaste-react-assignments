@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 import Search from "../assets/images/body/search.png";
 import { Link } from "react-router-dom";
 import UserContext from "../utils/UserContext";
+// import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -12,6 +13,7 @@ const Body = () => {
   const RestaurantCardWithAggregatedDiscount =
     WithAggregatedDiscount(RestaurantCard);
   const { loggedInUser, setUserName } = useContext(UserContext);
+  // const onlineStatus = useOnlineStatus();
 
   useEffect(() => {
     fetchData();
@@ -31,6 +33,18 @@ const Body = () => {
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  // if (onlineStatus === false) {
+  //   return (
+  //     <div className="pt-[8.625rem] mb-7">
+  //       <div className="2xl:w-[90rem] w-[73.125rem] mx-auto">
+  //         <h4 className="text-[0.9375rem] text-[#808080] font-normal">
+  //           Looks like you're offline. Please check your internet connection
+  //         </h4>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
